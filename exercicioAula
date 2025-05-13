@@ -1,0 +1,31 @@
+import random
+
+def mostraFatia(matriz, fatia):
+    qtdColunas = 3
+    qtdLinhas = 3
+
+    for y in range(qtdLinhas):
+        for x in range(qtdColunas):
+            D = matriz[fatia][y][x]
+            print(F"{D:2d}", end="")
+        print()
+
+def main():
+    qtdFatias = 3
+    qtdLinhas = 3
+    qtdColunas = 3
+    m = []
+    for z in range(qtdFatias):
+        fatia = []
+        for y in range(qtdLinhas):
+            linha = []
+            for x in range(qtdColunas):
+                linha.append(z)
+            fatia.append(linha)
+        m.append(fatia)    
+    for z in range(qtdFatias):
+      mostraFatia(m, z)
+    # for z in range(qtdFatias):
+
+if __name__ == "__main__":
+    main()
